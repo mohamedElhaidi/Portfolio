@@ -33,6 +33,26 @@ export const projects = [
         description: "something",
         image: bugTrackerIMG,
       },
+      {
+        title: "title",
+        description: "something",
+        image: bugTrackerIMG,
+      },
+      {
+        title: "title",
+        description: "something",
+        image: bugTrackerIMG,
+      },
+      {
+        title: "title",
+        description: "something",
+        image: bugTrackerIMG,
+      },
+      {
+        title: "title",
+        description: "something",
+        image: bugTrackerIMG,
+      },
     ],
   },
 ];

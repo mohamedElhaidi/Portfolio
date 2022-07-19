@@ -1,15 +1,18 @@
 export class ProjectModal {
   #projectModalElement;
   #projectModalElDimensions;
+
   #project;
   #visible = false;
   constructor(project) {
+    // stop scrolling
+    document.body.style.overflow = "hidden";
     // init
-    this.#projectModalElement = document.querySelector(elementId);
+    this.#project = project;
+    this.#projectModalElement = this.createModal();
+    document.body.appendChild(this.#projectModalElement);
     this.#projectModalElDimensions =
       this.#projectModalElement.getBoundingClientRect();
-    this.#project = project;
-    console.log(this.#projectModalElement);
 
     const sectionsWindow = this.#projectModalElement.querySelector(
       ".project-modal__window"
@@ -19,7 +22,7 @@ export class ProjectModal {
     );
     const sectionsEls = [];
 
-    options.project.sections.forEach((section) => {
+    project.sections.forEach((section) => {
       const sectionEl = this.createSection(section);
       sectionsEls[sectionsEls.length] = sectionEl;
       sectionsWrapper.appendChild(sectionEl);
@@ -34,9 +37,10 @@ export class ProjectModal {
   createModal() {
     const elString = `
     <div id="project-modal" class="project-modal">
+      <div class="project-modal__cover"></div>
       <div class="project-modal__window">
         <header class="project-modal__window__header">
-          <h2>Project Title</h2>
+          <h2>${this.#project.title}</h2>
           <div class="project-modal__window__header__options">
             <a
               href="${this.#project.githubURL}"
@@ -60,6 +64,12 @@ export class ProjectModal {
 
     const el = document.createElement("div");
     el.innerHTML = elString.trim();
+    el.firstChild
+      .querySelector(".project-modal__cover")
+      .addEventListener("click", (e) => {
+        document.body.removeChild(this.#projectModalElement);
+        document.body.style.overflow = "auto";
+      });
     return el.firstChild;
   }
   createSection(section) {
