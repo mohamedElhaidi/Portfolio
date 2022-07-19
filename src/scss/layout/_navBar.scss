@@ -1,0 +1,229 @@
+@use "../base/mixins";
+@use "../base/colors";
+
+
+body>header {
+    position: sticky;
+    z-index: 55;
+    top: 0;
+    height: 0;
+
+    width: 100%;
+
+    @include mixins.responsive(tablet) {
+
+        padding-left: 0vw;
+        padding-right: 0vw;
+
+    }
+
+    .navBar {
+        padding-inline: 10vw;
+        padding-block: 1em;
+        max-height: fit-content;
+
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1em;
+
+        background: colors.$blue-primary-color;
+
+        @include mixins.responsive(tablet) {
+            grid-template-columns: auto auto;
+        }
+
+
+    }
+
+    .scrollProgressBar {
+        position: relative;
+
+        width: 100%;
+        height: 3px;
+
+        background-color: rgba(0, 0, 0, 0.281);
+
+
+
+        &__innerProgress {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+
+            transition: width 0.2s ease-out;
+            background-color: colors.$orange-primary-color;
+        }
+    }
+}
+
+.logo {
+
+
+
+    font-family: 'Satisfy',
+        cursive;
+    font-size: 2em;
+    fill: colors.$yellow-primary-color;
+    color: colors.$yellow-primary-color;
+
+    svg {
+        width: clamp(5rem, calc(1em + 7vw), 10rem);
+    }
+}
+
+.nav-menu {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    font-size: clamp(1em, 0.3em + 1vw, 1.3em);
+
+    &__toggler {
+        display: block;
+        width: 2.5em;
+        border-width: 0;
+        color: white;
+
+        @include mixins.responsive(tablet) {
+            display: none;
+        }
+
+    }
+
+    &__list {
+        display: none;
+
+
+        &.toggle {
+            display: block;
+        }
+
+        @include mixins.responsive(tablet) {
+            display: block;
+
+            min-width: 100%;
+        }
+
+
+        ul {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 0 1em;
+
+            width: clamp(150px, 65%, 400px);
+            height: 100vh;
+
+
+            background-color: darken($color: colors.$blue-primary-color, $amount: 3);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @include mixins.responsive(tablet) {
+
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+
+                align-items: center;
+            }
+
+            li {
+                width: fit-content;
+                font-size: 1em;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 1.5em;
+                z-index: 2;
+
+
+
+                @include mixins.responsive(tablet) {
+                    padding: 0.3em 1em;
+                    z-index: 2;
+
+                    background-color: colors.$blue-primary-color;
+                    color: #fff;
+
+                    &.selected {
+                        background-color: #fff;
+                        border-radius: 5px;
+                        color: colors.$blue-primary-color;
+                        // text-decoration: underline;
+                    }
+
+                }
+
+                a {
+                    color: inherit;
+                }
+
+                @include mixins.responsive(tablet) {}
+            }
+
+            @include mixins.responsive(tablet) {
+                position: relative;
+
+                height: fit-content;
+
+
+                flex-direction: row;
+                gap: 3em;
+                width: 100%;
+                background-color: transparent;
+
+            }
+
+
+            // center line
+            @include mixins.responsive(tablet) {
+                &::after {
+                    content: "";
+
+                    position: absolute;
+                    right: 0;
+                    z-index: 1;
+
+                    width: 100%;
+                    height: 0.2em;
+                    background-color: white;
+                }
+
+                &::before {
+                    content: "";
+
+                    position: absolute;
+                    right: 0;
+                    z-index: 1;
+
+                    width: .7em;
+                    height: .7em;
+                    border-radius: 50%;
+                    background-color: white;
+                }
+            }
+        }
+
+        &__wrap {
+            background-color: rgba(5, 5, 5, 0.651);
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            @include mixins.responsive(tablet) {
+                display: none;
+            }
+
+        }
+    }
+
+
+}

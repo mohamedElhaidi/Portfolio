@@ -1,0 +1,33 @@
+@use "../base/colors";
+
+button,
+.button {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+.header-button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-width: 0px;
+    border-color: #ffffff;
+
+    color: white;
+
+    &:not(&__primary) {
+        box-shadow: 0 0 0px 3px white inset;
+    }
+
+    &__primary {
+        background-color: colors.$yellow-primary-color;
+        color: colors.$blue-primary-color;
+        border-color: transparent;
+
+    }
+}

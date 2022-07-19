@@ -1,0 +1,54 @@
+@use "../base/mixins";
+@use "../base/colors";
+
+
+.front-page {
+    position: relative;
+
+
+    padding-top: 25vh;
+    height: 85vh;
+
+    font-size: clamp(1rem, calc(1rem + 1vw), 2rem);
+
+    &__title {
+        font-size: 2em;
+        color: colors.$yellow-primary-color;
+        line-height: 1.24em;
+        letter-spacing: 1px;
+
+        @include mixins.responsive(tablet) {
+
+            font-size: 3em;
+        }
+    }
+
+    &__desc {
+        margin-top: 0.7em;
+        font-weight: 500;
+        font-size: 0.8em;
+        line-height: 1.08em;
+        width: 20em;
+    }
+
+    &__buttons {
+        // position: absolute;
+        bottom: 0;
+        // transform: translateY(-50%);
+        width: fit-content;
+        margin-bottom: 2em;
+        margin-top: 5%;
+
+        font-size: 0.5em;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 2em;
+
+        @include mixins.responsive(tablet) {
+
+            flex-direction: row;
+        }
+    }
+}

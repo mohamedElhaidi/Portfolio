@@ -1,0 +1,30 @@
+@use "../base/mixins";
+@use "../base/colors";
+
+
+
+
+.extra-projects-page {
+
+
+    &__wrap {
+        padding-top: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: center;
+
+        gap: 2em;
+
+
+
+
+    }
+
+    // &__title {
+    //     text-transform: uppercase;
+    //     font-size: 250%;
+    //     font-weight: lighter;
+    //     color: colors.$yellow-primary-color;
+    // }
+
+}

@@ -1,0 +1,46 @@
+@use "../base/mixins";
+@use "../base/colors";
+
+
+.project-modal-section {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+
+    &.reverse {
+
+        &__text {
+            grid-row: 2;
+        }
+
+        &__image {
+            grid-row: 1;
+        }
+    }
+
+    &.visible &__image-holder {
+        transform: none;
+    }
+
+    &.visible &__text-holder {
+        transform: none;
+    }
+
+    &__image-holder {
+        width: 100%;
+        transform: translateX(200%);
+        transition-duration: 500ms;
+
+        img {
+            width: 100%;
+
+        }
+    }
+
+    &__text-holder {
+        width: 100%;
+        transform: translateX(-200%);
+        transition-duration: 500ms;
+
+    }
+}

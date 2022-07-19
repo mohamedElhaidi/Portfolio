@@ -1,0 +1,61 @@
+@use "../base/mixins";
+@use "../base/colors";
+
+.social-medias-screen-floater {
+    font-size: max(0.5em, calc(1em + 0.05vw));
+
+
+    z-index: 10;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    margin: 0 0.5em;
+    transform-origin: 100% 100%;
+    transform: rotate(90deg)translateY(4000%);
+
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+
+
+    letter-spacing: 3px;
+    font-weight: 300;
+
+    --color: #fff;
+
+    color: var(--color);
+
+    ul {
+        position: absolute;
+        left: -15px;
+        padding-bottom: 3em;
+        transform: translateX(-200%) rotate(-90deg);
+
+        li {
+            margin-top: 0.5em;
+            fill: var(--color);
+
+            svg {
+                fill: #fff;
+                width: 1.7rem;
+                height: 1.7rem;
+            }
+
+            :hover {
+                fill: rgb(154, 245, 136);
+            }
+        }
+    }
+
+
+
+    &::after {
+
+        content: "";
+        display: block;
+        width: 5.5em;
+        height: 0.1em;
+        background-color: var(--color);
+    }
+}

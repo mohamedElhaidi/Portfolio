@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="obj"></div>
+      <div class="obj obj--2"></div>
+      <div class="obj obj--3"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 431.7 422.6">
+        <path
+          d="
+        M 100, 100
+        m -75, 0
+        a 75,75 0 1,0 150,0
+        a 75,75 0 1,0 -150,0
+        "
+          fill="none"
+          stroke="#5e5e7d"
+          stroke-width="3"
+          stroke-miterlimit="10"
+        />
+      </svg>
+    </div>
+  </body>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --delay: 0ms;
+      --path: path(
+        "M100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0 "
+      );
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      min-height: 100vh;
+      background-color: #1b1b24;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .wrapper {
+      position: relative;
+    }
+
+    .obj {
+      --color: salmon;
+      position: absolute;
+      top: 0;
+      left: 0;
+      offset-path: var(--path);
+      animation: move 5s infinite ease-in-out var(--delay);
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: var(--color);
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .obj--2 {
+      --delay: 1s;
+      --color: rgb(79, 40, 255);
+    }
+
+    .obj--3 {
+      --delay: 2s;
+      --color: turquoise;
+    }
+
+    svg {
+      background-color: black;
+      width: 429px;
+    }
+
+    @keyframes appear {
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes move {
+      10% {
+        opacity: 1;
+        offset-distance: 0%;
+        transform: scale(1);
+      }
+      30% {
+        box-shadow: -0.5rem 0 0.3rem var(--color, white);
+      }
+      70% {
+        box-shadow: -0.5rem 0 0.3rem var(--color, white);
+      }
+      90% {
+        opacity: 1;
+        offset-distance: 100%;
+        transform: scale(0.2);
+        box-shadow: none;
+      }
+      100% {
+        opacity: 0;
+        offset-distance: 100%;
+        transform: scale(0.2);
+      }
+    }
+  </style>
+</html>

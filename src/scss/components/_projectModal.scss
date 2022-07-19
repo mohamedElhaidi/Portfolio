@@ -1,0 +1,111 @@
+@use "../base/mixins";
+@use "../base/colors";
+
+.project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    display: none;
+
+    background-color: rgba(0, 0, 0, 0.445);
+
+    &__window {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4em;
+
+        min-height: 250px;
+        min-width: 500px;
+        max-height: 85%;
+        max-width: 950px;
+        width: 100%;
+
+        background-color: colors.$blue-primary-color;
+        outline: solid rgba(255, 255, 255, 0.726) 2px;
+
+
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        &__header {
+            padding-inline: 2em;
+            padding-top: 0;
+
+
+            position: sticky;
+            top: 0;
+            background-color: inherit;
+            margin-top: 1em;
+            padding-block: 0.3em;
+            z-index: 99;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+
+
+            &__options {
+
+                margin-top: 1em;
+                width: 100%;
+
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                flex-direction: row;
+                justify-content: center;
+                opacity: 1;
+                gap: 1em;
+
+                // box-shadow: rgba(255, 255, 255, 0.062) 0 0 7px 1px inset;
+                @include mixins.responsive(tablet) {
+                    // opacity: 0;
+
+                }
+
+                &__link {
+                    padding: 0.01em;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    background-color: rgba(252, 252, 252, 0.925);
+                    color: rgb(0, 0, 0);
+
+                    font-size: calc(1.2em + 0.1vw);
+                    text-transform: uppercase;
+
+                    &:hover {
+                        font-weight: bold;
+                        background-color: colors.$yellow-primary-color;
+                        color: colors.$blue-primary-color;
+                    }
+                }
+
+            }
+        }
+
+        &__section-wrapper {
+            padding-inline: 2em;
+            padding-top: 0;
+            padding-bottom: 5em;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+        }
+
+    }
+}

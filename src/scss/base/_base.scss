@@ -1,0 +1,27 @@
+@use "./colors";
+@use "./mixins";
+
+
+* {
+
+    box-sizing: content-box;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0;
+    // max-height: 100vh;
+    background-color: colors.$blue-primary-color;
+    color: white;
+
+}

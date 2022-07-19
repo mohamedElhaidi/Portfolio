@@ -1,0 +1,41 @@
+@use "../base/mixins";
+@use "../base/colors";
+
+
+
+
+.featured-projects-page {
+
+    &__wrap {
+
+        padding-top: 3vh;
+        padding-inline: 10%;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        // grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2em;
+
+        @include mixins.responsive(tablet) {
+
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include mixins.responsive(desktop) {
+
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+    }
+
+    // &__title {
+    //     text-transform: uppercase;
+    //     font-size: 250%;
+    //     font-weight: lighter;
+    //     color: colors.$yellow-primary-color;
+    // }
+
+}

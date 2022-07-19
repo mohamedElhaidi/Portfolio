@@ -1,0 +1,9 @@
+@use "../base/mixins";
+@use "../base/colors";
+
+
+footer {
+    height: 150px;
+    background-color: colors.$blue-primary-color;
+    width: 100%;
+}

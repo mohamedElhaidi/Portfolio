@@ -1,0 +1,23 @@
+@use "../base/mixins";
+@use "../base/colors";
+
+.skill {
+
+
+    &__progress {
+        height: 7px;
+        width: 350px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.301);
+
+        &__bar {
+            display: block;
+            height: 100%;
+
+            background: rgb(232, 199, 255);
+            background: linear-gradient(90deg, rgba(232, 199, 255, 1) 0%, rgba(220, 223, 25, 1) 100%);
+
+        }
+    }
+}

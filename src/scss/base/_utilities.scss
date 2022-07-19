@@ -1,0 +1,44 @@
+@use "./colors";
+@use "./mixins";
+
+.--transparent-background {
+    background-color: transparent;
+}
+
+.--yellow-background {
+    background-color: colors.$yellow-primary-color;
+}
+
+.--rounded-mid {
+    border-radius: 10px;
+}
+
+
+.--center {
+    margin-inline: auto;
+}
+
+
+.--noScroll {
+    @include mixins.responsive(phone) {
+        overflow: hidden;
+    }
+}
+
+
+.--colorBluePrimary {
+    color: colors.$blue-primary-color;
+}
+
+.--dim-text {
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.--scall-on-hover {
+    @include mixins.responsive(tablet) {
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.178) 0 0 15px 0;
+            transform: scale(1.01);
+        }
+    }
+}
