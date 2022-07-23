@@ -30,8 +30,9 @@
         .myPicture {
             width: 300px;
             height: 300px;
-            background-image: url("https://media.istockphoto.com/photos/portrait-of-a-smart-and-handsome-it-specialist-wearing-glasses-smiles-picture-id1197071216?k=20&m=1197071216&s=612x612&w=0&h=JEx2IgXxCr1ZNrgRLzbwx55CjpDxiDU0Vg8_ifjR6Pc=");
+            background-size: contain;
             background-position: 40%;
+            background-color: rgba(0, 0, 0, 0.349);
             border-radius: 10px;
             border: #ffffff93 solid 1px;
             box-shadow: #ffffff1c 0 0 15px 0;

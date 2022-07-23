@@ -12,7 +12,7 @@ module.exports = merge(common, {
   mode: "production",
   output: {
     filename: "[name].[hash].bundle.js", //[name]comes from name of entry point
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
   },
 
   optimization: {
