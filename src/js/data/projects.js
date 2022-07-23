@@ -1,4 +1,6 @@
 import ecommerceIMG from "../../assets/img/ecommerce.PNG";
+import bugTrackerIMG from "../../assets/img/bugTracker.PNG";
+import userCartIMG from "../../assets/img/user_cart.PNG";
 import selectingProductsIMG from "../../assets/img/selectingProducts.PNG";
 import userLoginEcommerceIMG from "../../assets/img/userLoginEcommerce.png";
 export const projects = [
