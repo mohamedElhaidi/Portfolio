@@ -1,1 +1,1 @@
-web: npm start ./dist
+web: vendor/bin/heroku-php-apache2  /dist
