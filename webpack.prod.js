@@ -32,7 +32,7 @@ module.exports = merge(common, {
   },
 
   plugins: [
-    new MiniCssExtractPlugin({ filename: "[name].[hash].css" }),
+    new MiniCssExtractPlugin({ filename: "[name].[fullhash].css" }),
     new CleanWebpackPlugin(),
   ],
 
