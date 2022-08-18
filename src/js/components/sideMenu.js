@@ -22,6 +22,8 @@ class SideMenu {
         this.toggleSideMenuList();
       });
     });
+
+    this.highlightListeItemById("front-page");
   }
   highlightListeItem = (item) => {
     this.sideMenuListItems.forEach((i) => i.classList.remove("selected"));
