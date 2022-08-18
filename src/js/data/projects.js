@@ -43,28 +43,24 @@ export const projects = [
     liveDemoURL: "https://bugtracker.hantercodes.com",
     sections: [
       {
-        title: "title",
-        description: "something",
+        title: "Design",
+        description: "Clean design using MUI Components.",
         image: bugTrackerIMG,
       },
       {
-        title: "title",
-        description: "something",
+        title: "Security",
+        description:
+          "by using google authentication service, it provides secure and flexible methods of authentication. With a roles based authorization system, a role can be created and given to a user.",
         image: bugTrackerIMG,
       },
       {
-        title: "title",
-        description: "something",
+        title: "Tasks managmenet",
+        description: "Includes Tasks managmenet system for each projects",
         image: bugTrackerIMG,
       },
       {
-        title: "title",
-        description: "something",
-        image: bugTrackerIMG,
-      },
-      {
-        title: "title",
-        description: "something",
+        title: "Bug tracking",
+        description: "Includes Bug tracking system for each projects",
         image: bugTrackerIMG,
       },
     ],

@@ -27,8 +27,8 @@ function createProjectCardElement(project) {
       )}
       </div>
       <div class="project-card__options">
-        <a href="${githubURL}" class="project-card__options__link">GitHub</a>
-        <a href="${liveDemoURL}" class="project-card__options__link">Live Demo</a>
+        <a href="${githubURL}" target="_blank" class="project-card__options__link">GitHub</a>
+        <a href="${liveDemoURL}" target="_blank" class="project-card__options__link">Live Demo</a>
       </div>
     </div>
   </div>`;
@@ -72,6 +72,7 @@ function createExtraCardElement(extra) {
     </div>
     <a
       href="${externalLink}"
+      target="_blank"
       class="extra-project-card__header__externalLink"
     >
       <svg
