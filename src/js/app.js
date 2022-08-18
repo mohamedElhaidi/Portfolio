@@ -1,6 +1,7 @@
 import "./components/sideMenu.js";
 import "./components/imagePreview.js";
 import "./components/projectModal.js";
+import "./services/visits.js";
 // import "./components/underNavBarScrollProgress.js";
 // import "./components/spinnableCircle.js";
 

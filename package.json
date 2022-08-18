@@ -28,6 +28,7 @@
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "css-minimizer-webpack-plugin": "^4.0.0",
+    "firebase": "^9.9.2",
     "mini-css-extract-plugin": "^2.6.1",
     "resolve-url-loader": "^5.0.0"
   }

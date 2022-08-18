@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const imgs = document.querySelectorAll(".zoomable");
   imgs.forEach((img) => {
     const imgDimensions = img.getBoundingClientRect();
-    console.log(imgDimensions);
+    // console.log(imgDimensions);
 
     // listen to mouse movements
     img.addEventListener("mousemove", function (event) {
