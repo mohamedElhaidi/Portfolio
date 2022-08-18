@@ -69,9 +69,8 @@ body>header {
     fill: colors.$yellow-primary-color;
     color: colors.$yellow-primary-color;
 
-    svg {
-        width: clamp(5rem, calc(1em + 7vw), 10rem);
-    }
+    letter-spacing: 2px;
+
 }
 
 .nav-menu {
