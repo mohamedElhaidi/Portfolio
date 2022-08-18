@@ -46,6 +46,10 @@
 
         gap: 2em;
 
+        & #ResumeLink {
+            color: white;
+        }
+
         @include mixins.responsive(tablet) {
 
             flex-direction: row;

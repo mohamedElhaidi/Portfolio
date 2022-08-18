@@ -1,5 +1,9 @@
 import ecommerceIMG from "../../assets/img/ecommerce.PNG";
 import bugTrackerIMG from "../../assets/img/bugTracker.PNG";
+import bugtrackerTicketIMG from "../../assets/img/bugtrackerTicket.PNG";
+import bugTrackerTodoIMG from "../../assets/img/bugTrackerTodo.PNG";
+import bugtrackerRolesIMG from "../../assets/img/bugtrackerRoles.PNG";
+
 import userCartIMG from "../../assets/img/user_cart.PNG";
 import selectingProductsIMG from "../../assets/img/selectingProducts.PNG";
 import userLoginEcommerceIMG from "../../assets/img/userLoginEcommerce.png";
@@ -51,17 +55,17 @@ export const projects = [
         title: "Security",
         description:
           "by using google authentication service, it provides secure and flexible methods of authentication. With a roles based authorization system, a role can be created and given to a user.",
-        image: bugTrackerIMG,
+        image: bugtrackerRolesIMG,
       },
       {
         title: "Tasks managmenet",
         description: "Includes Tasks managmenet system for each projects",
-        image: bugTrackerIMG,
+        image: bugtrackerTicketIMG,
       },
       {
         title: "Bug tracking",
         description: "Includes Bug tracking system for each projects",
-        image: bugTrackerIMG,
+        image: bugTrackerTodoIMG,
       },
     ],
   },

@@ -16,7 +16,11 @@ const referrer = document.referrer;
 
 // limit for 15/1000 seconds
 console.log(timenow - lastVisit);
-if (!tracked || timenow - lastVisit > 15000) {
+if (
+  !tracked ||
+  timenow - lastVisit > 15000 ||
+  currentURL !== localStorage.getItem("url")
+) {
   localStorage.setItem("tracked", 0);
   fetch("https://api.ipify.org/?format=json", {
     method: "GET",
@@ -47,5 +51,6 @@ if (!tracked || timenow - lastVisit > 15000) {
       //   save
       localStorage.setItem("lastVisitTimestamp", timenow);
       localStorage.setItem("tracked", 1);
+      localStorage.setItem("url", currentURL);
     });
 }

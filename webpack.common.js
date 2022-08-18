@@ -31,6 +31,17 @@ module.exports = {
           filename: "images/[name][ext]",
         },
       },
+      {
+        test: /\.(pdf)$/i,
+        use: [
+          {
+            loader: "file-loader",
+          },
+        ],
+        generator: {
+          filename: "docs/[name][ext]",
+        },
+      },
     ],
   },
 };

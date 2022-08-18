@@ -14,20 +14,15 @@ export const profile = {
       { name: "CSS/SCSS", progress: 65 },
       { name: "JavaScript", progress: 60 },
       { name: "ReactJs", progress: 80 },
-      //   { name: "Stripe", progress: 50 },
-      //   { name: "MUI", progress: 50 },
-      //   { name: "Joi", progress: 50 },
-      //   { name: "JSAP", progress: 50 },
     ],
   },
 
   backendEndSkills: {
     name: "Back-end",
     tags: [
-      { name: "MYSQL", progress: 44 },
-      { name: "NodeJs", progress: 55 },
-      { name: "PHP", progress: 35 },
-      { name: "Firebase", progress: 40 },
+      { name: "MYSQL", progress: 35 },
+      { name: "NodeJs", progress: 70 },
+      { name: "Firebase", progress: 60 },
     ],
   },
 };
