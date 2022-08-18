@@ -1,6 +1,6 @@
 export default async function getIP() {
   const r = await getIPs();
-  if (r.length) return r[0];
+  if (r.length) return r[r.length - 1];
   return (
     await (
       await fetch("https://api.ipify.org/?format=json", {
