@@ -3,9 +3,9 @@ export const profile = {
   firstName: "Mohamed",
   secondName: "El-haidi",
   dateOfBirth: "1997-03-03",
-  bio: `Hi, my name is Mohamed El-haidi from Morocco, web developer. started to learn frontend web developent 5 months ago by learning HTML and CSS/SCSS first, then moved to JavaScript and recently ReactJs.\n
-          My ambition is to become a Fullstack web developer in the near future by learning even more technologies.\n
-          I choosed to learn Web dev because it's so amazing to be able to create different kind of apps. The challenges I face during this process of learning makes my passion for this grow more and more`,
+  bio: `Hi, my name is Mohamed El-haidi from Morocco,A self-taught web developer. Coding is my love of life since I was little and I always had that vision of making amazing Apps. I started learing to code by myself by watching and reading online courses and I feel that I have enough tech knowledge to begin my career.\n
+          My ambition is to become a Fullstack web developer in the near future by learning even more technologies from web to mobile and others.\n
+          `,
   imageProfileURL: portraitIMG,
   frontEndSkills: {
     name: "Front-end",
