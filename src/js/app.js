@@ -50,7 +50,7 @@ function createProjectCardElement(project) {
   return HtmlEl.firstChild;
 }
 function createExtraCardElement(extra) {
-  const { title, description, tags } = extra;
+  const { title, description, tags, externalLink } = extra;
   const elString = `<div class="extra-project-card --scall-on-hover">
   <div class="extra-project-card__header">
     <div class="extra-project-card__header__folder">
@@ -71,7 +71,7 @@ function createExtraCardElement(extra) {
       </svg>
     </div>
     <a
-      href="#externalLink"
+      href="${externalLink}"
       class="extra-project-card__header__externalLink"
     >
       <svg
