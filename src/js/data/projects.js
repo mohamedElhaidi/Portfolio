@@ -12,7 +12,7 @@ export const projects = [
       "An ecommerce website made with reactJs, php and mysql as database. simple design using css with responsive layouts. utilise Stripe api for payements.",
     tags: ["ReactJs", "React-Router", "PHP", "MYSQL", "STRIPE"],
     githubURL: "https://github.com/mohamedElhaidi/eCommerce",
-    liveDemoURL: "https://bestshop-reactjs.herokuapp.com/",
+    liveDemoURL: "https://bestshop.hantercodes.com",
     sections: [
       {
         title: "Design",
@@ -40,7 +40,7 @@ export const projects = [
       "a simple bug and task tracking app using ReactJS and firebase (authentication, firestore, storage, functions) as backend. provides simple, flexible and secure way to manage projects.",
     tags: ["ReactJs", "React-Router", "Firebase", "MUI"],
     githubURL: "https://github.com/mohamedElhaidi/Todo",
-    liveDemoURL: "https://todo-reactjs-firebase.herokuapp.com/",
+    liveDemoURL: "https://bugtracker.hantercodes.com",
     sections: [
       {
         title: "title",
