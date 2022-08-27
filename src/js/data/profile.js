@@ -21,7 +21,7 @@ export const profile = {
     name: "Back-end",
     tags: [
       { name: "MYSQL", progress: 35 },
-      { name: "NodeJs", progress: 70 },
+      { name: "NodeJs", progress: 50 },
       { name: "Firebase", progress: 60 },
     ],
   },

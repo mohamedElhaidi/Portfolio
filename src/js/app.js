@@ -11,7 +11,7 @@ import { extraProjects, projects } from "./data/projects.js";
 import { profile } from "./data/profile.js";
 import { ProjectModal } from "./components/projectModal.js";
 
-import ResumePDF from "../assets/docs/CV2.pdf";
+import ResumePDF from "../assets/docs/cv5.pdf";
 
 document.getElementById("ResumeLink").href = ResumePDF;
 
