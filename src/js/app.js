@@ -1,6 +1,7 @@
 import "./components/sideMenu.js";
 import "./components/imagePreview.js";
 import "./components/projectModal.js";
+import vanishers from "./components/vanisher.js";
 // import "./services/visits.js";
 // import "./components/underNavBarScrollProgress.js";
 // import "./components/spinnableCircle.js";
@@ -33,9 +34,7 @@ extraProjects.forEach((extra) => {
 
 profileHolder.appendChild(createProfileElement(profile));
 
-// social mde
 // social media
-
 const socialMediaFloaterList = document.querySelectorAll(
   ".social-media-list ul"
 );
@@ -48,13 +47,6 @@ socialMedia.forEach((data) =>
 
 // logo effect
 const navBarLogo = document.querySelector("#navBar-logo");
-const vanishers = document.querySelectorAll(".vanisher");
-
-vanishers.forEach((vanisher) => {
-  const delay = vanisher.dataset["delay"] || 0;
-  // vanisher.style.transitionDuration = "0.3s";
-  // vanisher.style.transitionDelay = delay + "ms";
-});
 document.addEventListener("scroll", () => {
   const scrollPos = window.scrollY;
   const scrollPosMax = Math.ceil(
@@ -62,22 +54,7 @@ document.addEventListener("scroll", () => {
   );
   const width = (150 / scrollPosMax) * scrollPos;
   navBarLogo.children[1].style.width = width + "px";
-
-  //
-
-  vanishers.forEach((vanisher) => {
-    const { y, height } = vanisher.getClientRects()[0];
-    const start = y + height * 0.2;
-    const end = y + height * 0.8;
-    const screenHeight = window.innerHeight;
-
-    if (
-      (start > 0 && start < screenHeight) ||
-      (end > 0 && end < screenHeight)
-    ) {
-      vanisher.classList.add("--unvanish");
-    } else {
-      vanisher.classList.remove("--unvanish");
-    }
-  });
 });
+
+// initializing vanishers
+vanishers.init();
