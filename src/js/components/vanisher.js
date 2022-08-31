@@ -17,6 +17,7 @@ class Vanisher {
     });
   }
 }
+
 module.exports.init = function () {
   const vanishers = document.querySelectorAll(".vanisher");
   vanishers.forEach((vanisher) => {
