@@ -5,20 +5,20 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 9999;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
     // display: none;
 
-    background-color: rgba(0, 0, 0, 0.692);
+    backdrop-filter: blur(15px);
 
     &__cover {
         cursor: pointer;
         position: fixed;
         top: 0;
         right: 0;
-        z-index: 99;
+
 
 
 
@@ -59,8 +59,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
-
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.158)10px 10px 7px 2px;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
@@ -73,7 +73,7 @@
         width: 95%;
 
         background-color: colors.$blue-primary-color;
-
+        backdrop-filter: blur(15px);
 
 
         overflow-y: scroll;

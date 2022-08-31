@@ -9,9 +9,7 @@ class SideMenu {
     this.bodyElement = document.body;
     this.sideMenuToggler = document.getElementById("nav-menu-toggler");
     this.sideMenu = document.getElementById("nav-menu-list");
-    this.sideMenuListWrap = this.sideMenu.getElementsByClassName(
-      "nav-menu__list__wrap"
-    )[0];
+    this.sideMenuListWrap = this.sideMenu.getElementsByClassName("bg")[0];
     this.sideMenuListItems = [...this.sideMenu.getElementsByTagName("li")];
 
     this.sideMenuListWrap.addEventListener("click", this.toggleSideMenuList);
@@ -19,7 +17,6 @@ class SideMenu {
     this.sideMenuListItems.forEach((item) => {
       item.addEventListener("click", (event) => {
         this.highlightListeItem(item);
-        this.toggleSideMenuList();
       });
     });
 
@@ -72,7 +69,7 @@ if (pageSectionId) {
 }
 
 //detect which page section is visible for the user
-const pages = [...document.getElementsByClassName("page")];
+const sections = [...document.getElementsByClassName("section")];
 
 let pageScroll = 0;
 
@@ -80,7 +77,7 @@ const checkVisiblePage = (e) => {
   // pages.forEach((page) => console.log(page.id, page.getClientRects()[0]));
   const windowHeight = window.innerHeight;
 
-  let selectedPage = pages.reduce((prev, page) => {
+  let selectedPage = sections.reduce((prev, page) => {
     pageRect = page.getClientRects()[0];
     pageTop = pageRect.top;
     pageMargin = pageRect.top + pageRect.height;

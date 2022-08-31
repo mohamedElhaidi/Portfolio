@@ -23,5 +23,46 @@ body {
     // max-height: 100vh;
     background-color: colors.$blue-primary-color;
     color: white;
+    animation: colorifyBody 50s infinite ease-out;
+
+    @keyframes colorifyBody {
+        0% {
+            background-color: rgb(125, 0, 150);
+        }
+
+        30% {
+            background-color: rgb(207, 122, 24);
+        }
+
+        70% {
+            background-color: rgb(26, 153, 79);
+        }
+
+        100% {
+            background-color: rgb(125, 0, 150);
+        }
+    }
+
+    main {
+
+        width: 100%;
+        max-width: 1000px;
+        margin-inline: auto;
+        // background-color: black;
+    }
+}
+
+
+
+// effect test
+
+.bg-effect-container {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    // background-color: black;
 
 }

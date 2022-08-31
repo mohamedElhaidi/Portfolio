@@ -8,15 +8,8 @@
 
     scroll-snap-align: center;
     overflow: hidden;
-
     display: grid;
     grid-template-columns: 1fr;
-
-    --bgColor: rgba(0, 0, 0, 0.233);
-    background-color: rgba(58, 130, 238, 0.116);
-    // box-shadow: rgba(0, 0, 0, 0.377) 0 0 7px 1px inset;
-    border-radius: 7px;
-
     user-select: none;
     cursor: pointer;
 
@@ -35,14 +28,11 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-
         cursor: cell;
 
         @include mixins.responsive(tablet) {
             height: 100%;
         }
-
-
     }
 
     &__info {
@@ -69,7 +59,6 @@
 
 
     &__options {
-
         margin-top: 1em;
         width: 100%;
 

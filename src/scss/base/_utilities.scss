@@ -1,5 +1,6 @@
 @use "./colors";
 @use "./mixins";
+@use "./animations";
 
 .--transparent-background {
     background-color: transparent;
@@ -41,4 +42,18 @@
             transform: scale(1.01);
         }
     }
+}
+
+
+.vanisher {
+    transform: scale(0.3);
+}
+
+.--unvanish {
+    transform: scale(1);
+}
+
+.--darkCard {
+    background-color: rgba(0, 0, 0, 0.322);
+    box-shadow: rgba(20, 20, 20, 0.123) 0 0 7px 0px;
 }

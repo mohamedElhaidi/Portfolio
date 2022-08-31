@@ -4,19 +4,19 @@
 
 
 
-.featured-projects-page {
+.featured-projects-section {
 
     &__wrap {
 
         padding-top: 3vh;
-        padding-inline: 10%;
+
 
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         // grid-template-columns: 1fr;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         gap: 2em;
 
         @include mixins.responsive(tablet) {

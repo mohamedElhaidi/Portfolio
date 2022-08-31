@@ -10,19 +10,19 @@ export const profile = {
   frontEndSkills: {
     name: "Front-end",
     tags: [
-      { name: "HTML", progress: 95 },
-      { name: "CSS/SCSS", progress: 65 },
-      { name: "JavaScript", progress: 60 },
-      { name: "ReactJs", progress: 80 },
+      { name: "HTML", progress: 95, color: "white" },
+      { name: "CSS/SCSS", progress: 65, color: "white" },
+      { name: "JavaScript", progress: 60, color: "white" },
+      { name: "ReactJs", progress: 80, color: "white" },
     ],
   },
 
   backendEndSkills: {
     name: "Back-end",
     tags: [
-      { name: "MYSQL", progress: 35 },
-      { name: "NodeJs", progress: 50 },
-      { name: "Firebase", progress: 60 },
+      { name: "MYSQL", progress: 35, color: "white" },
+      { name: "NodeJs", progress: 50, color: "white" },
+      { name: "Firebase", progress: 60, color: "white" },
     ],
   },
 };

@@ -9,7 +9,7 @@
     // overflow: auto;
 
 
-    overflow: hidden;
+    // overflow: hidden;
 
     &__wrap .profileHolder {
         padding-block: 3vh;
@@ -20,12 +20,41 @@
         flex-direction: column;
         gap: 2.5em;
 
+        @include mixins.responsive(tablet) {
+            grid-template-columns: repeat(2, 1fr);
 
-        overflow: hidden;
+
+        }
+
+        // overflow: hidden;
 
         p {
             font-size: clamp(1rem, calc(1rem + 0.1vw), 2em);
         }
+
+        .text {
+            @include mixins.responsive(tablet) {
+                grid-column: 2;
+                grid-row: 1;
+
+            }
+
+            grid-row: 2;
+        }
+
+        .skills {
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            // justify-content: center;
+            gap: 1rem;
+
+            grid-column: 1/3;
+
+
+        }
+
 
         .myPicture {
             width: 300px;
@@ -33,8 +62,8 @@
             background-size: contain;
             background-position: 40%;
             background-color: rgba(0, 0, 0, 0.349);
-            border-radius: 10px;
-            border: #ffffff93 solid 1px;
+            border-radius: 3px;
+            border: #ffffff solid 10px;
             box-shadow: #ffffff1c 0 0 15px 0;
         }
 
