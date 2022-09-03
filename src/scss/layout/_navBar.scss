@@ -82,6 +82,10 @@ main>header {
             min-width: 100%;
             visibility: visible;
             opacity: 1;
+
+            & .bg {
+                display: none;
+            }
         }
 
 

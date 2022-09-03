@@ -18,20 +18,24 @@ import createSocialMediaElement from "./generators/socialMedia.js";
 
 document.getElementById("ResumeLink").href = ResumePDF;
 
+// populate projects
 const projectsHolder = document.querySelector(
   "#featured-projects .section__content"
 );
-const extraProjectsHolder = document.querySelector(
-  "#extra-projects .extra-projects-page__wrap"
-);
-const profileHolder = document.querySelector("#about-me .about-me-page__wrap");
 projects.forEach((project) => {
   projectsHolder.appendChild(createProjectCardElement(project));
 });
+
+// populate mini projects
+const extraProjectsHolder = document.querySelector(
+  "#extra-projects .extra-projects-page__wrap"
+);
 extraProjects.forEach((extra) => {
   extraProjectsHolder.appendChild(createExtraCardElement(extra));
 });
 
+// populate profile
+const profileHolder = document.querySelector("#about-me .about-me-page__wrap");
 profileHolder.appendChild(createProfileElement(profile));
 
 // social media
@@ -58,3 +62,22 @@ document.addEventListener("scroll", () => {
 
 // initializing vanishers
 vanishers.init();
+
+// contact
+
+const contatMeForm = document.querySelector("#contatMe-form");
+
+contatMeForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const { value: contactName } = document.querySelector("#contact-name");
+  const { value: contactEmail } = document.querySelector("#contact-email");
+  const { value: contactMessage } = document.querySelector("#contact-message");
+
+  const data = {
+    contactName,
+    contactEmail,
+    contactMessage,
+  };
+
+  // const contactDoc
+});

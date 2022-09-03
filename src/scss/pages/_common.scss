@@ -5,18 +5,18 @@
 .sections {
     width: 100%;
     padding-inline: 2rem;
-    // padding-left: 5rem;
 
     @include mixins.responsive(desktop) {
         padding: 0;
-        // padding-left: 5rem;
+
     }
 
 }
 
 .section {
     padding-top: 5em;
-    min-height: 100vh;
+
+    min-height: fit-content;
     overflow: hidden;
 
     &__title-wrap {
