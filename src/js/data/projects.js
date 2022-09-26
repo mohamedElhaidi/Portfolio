@@ -3,6 +3,7 @@ import bugTrackerIMG from "../../assets/img/bugTracker.PNG";
 import bugtrackerTicketIMG from "../../assets/img/bugtrackerTicket.PNG";
 import bugTrackerTodoIMG from "../../assets/img/bugTrackerTodo.PNG";
 import bugtrackerRolesIMG from "../../assets/img/bugtrackerRoles.PNG";
+import ipFetcherHomeIMG from "../../assets/img/ip-fetcher_home.PNG";
 
 import userCartIMG from "../../assets/img/user_cart.PNG";
 import selectingProductsIMG from "../../assets/img/selectingProducts.PNG";
@@ -66,6 +67,35 @@ export const projects = [
         title: "Bug tracking",
         description: "Includes Bug tracking system for each projects",
         image: bugTrackerTodoIMG,
+      },
+    ],
+  },
+  {
+    id: 2,
+    thumbnail: ipFetcherHomeIMG,
+    title: "IP Fetcher",
+    description:
+      "A service that provides geolocation and resourses information API to developers and entreprises for their products.",
+    tags: ["NodeJs", "MYSQL", "SCSS", "Stripe"],
+    githubURL: "https://github.com/mohamedElhaidi/IPGeoLocator-JS-NodeJs",
+    liveDemoURL: "https://ip-fetcher.herokuapp.com/",
+    sections: [
+      {
+        title: "Secure and flexible",
+        description:
+          "Once a user registers and pays, they are allowed to create as much API keys as they want with the ability to strict origin source for each API key.",
+        image: ipFetcherHomeIMG,
+      },
+      {
+        title: "Stripe payment and Multi-plan system",
+        description:
+          "I implimented Stripe payment system with the checkout method. A product will dynamicly be created once the admin creates a new plan from the admin tools provided by the app. when a payment has been successful Stripe calls a Webhook API then a subscription is created inside MYSQL Database",
+        image: ipFetcherHomeIMG,
+      },
+      {
+        title: "Beautiful design",
+        description: "Made with SCSS for resuablity.",
+        image: ipFetcherHomeIMG,
       },
     ],
   },
