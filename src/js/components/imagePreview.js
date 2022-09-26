@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", function () {
     img.addEventListener("mouseleave", function (event) {
       img.style.backgroundPositionX = "initial";
       img.style.backgroundPositionY = "initial";
-      img.style.backgroundSize = "100%";
+      img.style.backgroundSize = "cover";
     });
   });
 });

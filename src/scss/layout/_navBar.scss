@@ -19,11 +19,11 @@ main>header {
         grid-template-columns: 1fr auto;
         padding-inline: 10vw;
         padding-block: 0.6rem;
-        padding-top: 1rem;
-        background-color: rgba(128, 128, 128, 0.288);
+        // padding-top: 1rem;
+        background-color: rgba(0, 0, 0, 0.534);
 
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
 
         @include mixins.responsive(tablet) {
             overflow: hidden;
@@ -95,9 +95,8 @@ main>header {
             top: 0;
             right: 0;
             padding: 0 1em;
-            width: clamp(150px, 65%, 500px);
+            width: clamp(150px, 50%, 500px);
             height: 100vh;
-
             background-color: rgba(0, 0, 0, 0.76);
 
             display: flex;

@@ -9,7 +9,7 @@ import vanishers from "./components/vanisher.js";
 import { extraProjects, projects } from "./data/projects.js";
 import { profile } from "./data/profile.js";
 
-import ResumePDF from "../assets/docs/cv5.pdf";
+import ResumePDF from "../assets/docs/CV_final_2022_9_26.pdf";
 import { socialMedia } from "./data/social.js";
 import createProfileElement from "./generators/aboutMe.js";
 import createProjectCardElement from "./generators/featuredProjects.js";

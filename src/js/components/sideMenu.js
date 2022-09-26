@@ -78,7 +78,7 @@ const checkVisiblePage = (e) => {
     pageRect = page.getClientRects()[0];
     pageTop = pageRect.top;
 
-    if (pageTop <= windowHeight && pageTop >= -10) return page;
+    if (pageTop <= 100 && pageTop >= -100) return page;
     return prev;
   }, null);
   return selectedPage;

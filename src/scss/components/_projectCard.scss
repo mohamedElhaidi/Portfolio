@@ -15,7 +15,7 @@
 
     @include mixins.responsive(tablet) {
         grid-template-columns: repeat(2, 1fr);
-        height: 280px;
+        // height: 280px;
     }
 
     &:hover &__options {

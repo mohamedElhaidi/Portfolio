@@ -22,17 +22,19 @@
         fill: colors.$yellow-primary-color;
         color: colors.$yellow-primary-color;
         letter-spacing: 2px;
-        filter: invert(100);
+        // filter: invert(100);
     }
 
     & span:first-child {
-        color: #000000;
+        color: rgba(255, 255, 255, 0.904);
+
     }
 
     & span:last-child {
         overflow: hidden;
         display: block;
-        color: rgb(5, 83, 253);
+        color: rgb(144, 233, 27);
+        margin-left: -1px;
         width: 0;
         max-width: 1500px;
     }

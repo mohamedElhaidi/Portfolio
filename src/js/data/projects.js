@@ -4,9 +4,10 @@ import bugtrackerTicketIMG from "../../assets/img/bugtrackerTicket.PNG";
 import bugTrackerTodoIMG from "../../assets/img/bugTrackerTodo.PNG";
 import bugtrackerRolesIMG from "../../assets/img/bugtrackerRoles.PNG";
 import ipFetcherHomeIMG from "../../assets/img/ip-fetcher_home.PNG";
+import ipFetcherStripeIMG from "../../assets/img/ip-fetcher_home_stripe.PNG";
+import ipFetcherDemoIMG from "../../assets/img/ip-fetcher_demo.PNG";
 
 import userCartIMG from "../../assets/img/user_cart.PNG";
-import selectingProductsIMG from "../../assets/img/selectingProducts.PNG";
 import userLoginEcommerceIMG from "../../assets/img/userLoginEcommerce.png";
 export const projects = [
   {
@@ -72,7 +73,7 @@ export const projects = [
   },
   {
     id: 2,
-    thumbnail: ipFetcherHomeIMG,
+    thumbnail: ipFetcherDemoIMG,
     title: "IP Fetcher",
     description:
       "A service that provides geolocation and resourses information API to developers and entreprises for their products.",
@@ -84,13 +85,13 @@ export const projects = [
         title: "Secure and flexible",
         description:
           "Once a user registers and pays, they are allowed to create as much API keys as they want with the ability to strict origin source for each API key.",
-        image: ipFetcherHomeIMG,
+        image: ipFetcherDemoIMG,
       },
       {
         title: "Stripe payment and Multi-plan system",
         description:
           "I implimented Stripe payment system with the checkout method. A product will dynamicly be created once the admin creates a new plan from the admin tools provided by the app. when a payment has been successful Stripe calls a Webhook API then a subscription is created inside MYSQL Database",
-        image: ipFetcherHomeIMG,
+        image: ipFetcherStripeIMG,
       },
       {
         title: "Beautiful design",
