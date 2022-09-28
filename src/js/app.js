@@ -2,7 +2,7 @@ import "./components/sideMenu.js";
 import "./components/imagePreview.js";
 import "./components/projectModal.js";
 import vanishers from "./components/vanisher.js";
-// import "./services/visits.js";
+import "./services/visits.js";
 // import "./components/underNavBarScrollProgress.js";
 // import "./components/spinnableCircle.js";
 
