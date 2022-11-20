@@ -2,15 +2,6 @@
 @use "./mixins";
 
 
-* {
-
-    box-sizing: content-box;
-    box-sizing: border-box;
-
-    margin: 0;
-    padding: 0;
-}
-
 
 
 body {
@@ -23,5 +14,46 @@ body {
     // max-height: 100vh;
     background-color: colors.$blue-primary-color;
     color: white;
+    animation: colorifyBody 10s infinite ease-out;
+
+    @keyframes colorifyBody {
+        0% {
+            background-color: rgb(48, 30, 126);
+        }
+
+        30% {
+            background-color: rgb(128, 101, 248);
+        }
+
+        70% {
+            background-color: rgb(130, 35, 207);
+        }
+
+        100% {
+            background-color: rgb(48, 30, 126);
+        }
+    }
+
+    main {
+
+        width: 100%;
+        max-width: 1000px;
+        margin-inline: auto;
+        // background-color: black;
+    }
+}
+
+
+
+// effect test
+
+.bg-effect-container {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    // background-color: black;
 
 }

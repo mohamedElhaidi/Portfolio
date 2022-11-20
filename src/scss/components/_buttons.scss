@@ -5,6 +5,7 @@ button,
     background-color: transparent;
     border-style: solid;
     border-width: 1px;
+    cursor: pointer;
 }
 
 
@@ -17,8 +18,8 @@ button,
     letter-spacing: 1px;
     border-width: 0px;
     border-color: #ffffff;
-
     color: white;
+    cursor: pointer;
 
     &:not(&__primary) {
         box-shadow: 0 0 0px 3px white inset;

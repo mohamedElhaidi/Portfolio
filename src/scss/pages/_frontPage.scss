@@ -2,12 +2,11 @@
 @use "../base/colors";
 
 
-.front-page {
+.front-section {
     position: relative;
-
+    min-height: 100vh;
 
     padding-top: 25vh;
-    height: 85vh;
 
     font-size: clamp(1rem, calc(1rem + 1vw), 2rem);
 

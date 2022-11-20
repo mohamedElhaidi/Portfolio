@@ -1,21 +1,18 @@
 class SideMenu {
-  bodyElement;
   sideMenuToggler;
   sideMenu;
   sideMenuListWrap;
   sideMenuListItems;
 
   constructor() {
-    this.bodyElement = document.body;
     this.sideMenuToggler = document.getElementById("nav-menu-toggler");
     this.sideMenu = document.getElementById("nav-menu-list");
-    this.sideMenuListWrap = this.sideMenu.getElementsByClassName(
-      "nav-menu__list__wrap"
-    )[0];
+    this.sideMenuListWrap = this.sideMenu.getElementsByClassName("bg")[0];
     this.sideMenuListItems = [...this.sideMenu.getElementsByTagName("li")];
 
     this.sideMenuListWrap.addEventListener("click", this.toggleSideMenuList);
     this.sideMenuToggler.addEventListener("click", this.toggleSideMenuList);
+
     this.sideMenuListItems.forEach((item) => {
       item.addEventListener("click", (event) => {
         this.highlightListeItem(item);
@@ -23,7 +20,7 @@ class SideMenu {
       });
     });
 
-    this.highlightListeItemById("front-page");
+    this.highlightListeItemById(this.sideMenuListItems[0].id);
   }
   highlightListeItem = (item) => {
     this.sideMenuListItems.forEach((i) => i.classList.remove("selected"));
@@ -43,11 +40,11 @@ class SideMenu {
   toggleSideMenuList = () => {
     if (this.sideMenu.classList.contains("toggle")) {
       this.closeSideMenuList();
-      this.bodyElement.classList.remove("--noScroll");
+      document.body.classList.remove("--noScroll");
       return;
     }
     this.openSideMenuList();
-    this.bodyElement.classList.add("--noScroll");
+    document.body.classList.add("--noScroll");
   };
 
   openSideMenuList = () => {
@@ -63,7 +60,7 @@ class SideMenu {
 
 const sideMenu = new SideMenu();
 
-//hightlight the main or page section retrieved from url
+//hightlight the main or page section retrieved from url hash
 
 let pageSectionId = window.location.hash;
 if (pageSectionId) {
@@ -72,18 +69,15 @@ if (pageSectionId) {
 }
 
 //detect which page section is visible for the user
-const pages = [...document.getElementsByClassName("page")];
-
-let pageScroll = 0;
+const sections = [...document.getElementsByClassName("section")];
 
 const checkVisiblePage = (e) => {
-  // pages.forEach((page) => console.log(page.id, page.getClientRects()[0]));
   const windowHeight = window.innerHeight;
 
-  let selectedPage = pages.reduce((prev, page) => {
+  let selectedPage = sections.reduce((prev, page) => {
     pageRect = page.getClientRects()[0];
     pageTop = pageRect.top;
-    pageMargin = pageRect.top + pageRect.height;
+
     if (pageTop <= 100 && pageTop >= -100) return page;
     return prev;
   }, null);

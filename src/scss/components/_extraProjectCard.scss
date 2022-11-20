@@ -2,19 +2,17 @@
 @use "../base/colors";
 
 .extra-project-card {
+    user-select: none;
     position: relative;
 
-    padding: 0.7em;
+    padding: 1em;
     width: 100%;
-    min-height: 250px;
+    // min-height: 250px;
 
-    border-radius: 7px;
 
     display: flex;
     flex-direction: column;
 
-    background-color: colors.$blue-secondery-color;
-    box-shadow: rgba(20, 20, 20, 0.562) 0 0 7px 0px;
 
     @include mixins.responsive(tablet) {
         width: min(100%, 350px);
