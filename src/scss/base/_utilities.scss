@@ -1,5 +1,6 @@
 @use "./colors";
 @use "./mixins";
+@use "./animations";
 
 .--transparent-background {
     background-color: transparent;
@@ -10,7 +11,7 @@
 }
 
 .--rounded-mid {
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 
@@ -41,4 +42,25 @@
             transform: scale(1.01);
         }
     }
+}
+
+
+.vanisher {
+    transform: scale(0.8);
+}
+
+.--unvanish {
+    transform: scale(1);
+}
+
+.--darkCard {
+    background-color: rgba(0, 0, 0, 0.473);
+    box-shadow: rgba(20, 20, 20, 0.123) 0 0 5px 0px;
+}
+
+
+.--glassyBg {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    -moz-backdrop-filter: blur(15px)
 }

@@ -25,6 +25,10 @@
 
     color: var(--color);
 
+    :hover {
+        color: rgb(154, 245, 136);
+    }
+
     &::after {
 
         content: "";

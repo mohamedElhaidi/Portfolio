@@ -1,0 +1,42 @@
+@use "../base/mixins";
+@use "../base/colors";
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    // background-color: rgb(255, 255, 255);
+    padding-inline: 1rem;
+    // border-radius: 50px;
+    width: 180px;
+
+    & span {
+        position: absolute;
+        font-family: 'Satisfy',
+            cursive;
+        font-size: 1.7rem;
+        font-weight: 600;
+        fill: colors.$yellow-primary-color;
+        color: colors.$yellow-primary-color;
+        letter-spacing: 2px;
+        // filter: invert(100);
+    }
+
+    & span:first-child {
+        color: rgba(255, 255, 255, 0.904);
+
+    }
+
+    & span:last-child {
+        overflow: hidden;
+        display: block;
+        color: rgb(144, 233, 27);
+        margin-left: -1px;
+        width: 0;
+        max-width: 1500px;
+    }
+
+}

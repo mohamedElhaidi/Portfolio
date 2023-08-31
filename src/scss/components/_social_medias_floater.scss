@@ -29,21 +29,41 @@
     ul {
         position: absolute;
         left: -15px;
-        padding-bottom: 3em;
+        padding-bottom: 5em;
         transform: translateX(-200%) rotate(-90deg);
 
         li {
+            position: relative;
             margin-top: 0.5em;
             fill: var(--color);
+            width: 1.7rem;
+            height: 1.7rem;
 
             svg {
                 fill: #fff;
-                width: 1.7rem;
-                height: 1.7rem;
+
             }
 
             :hover {
                 fill: rgb(154, 245, 136);
+
+
+                &::after {
+                    text-align: center;
+                    color: black;
+                    content: attr(data-tooltip);
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    display: block;
+                    width: 150px;
+
+                    background-color: transparent;
+                    backdrop-filter: invert(100);
+                    transform: translateX(110%) translateY(-50%);
+                    border-radius: 50px;
+                }
+
             }
         }
     }
@@ -51,10 +71,9 @@
 
 
     &::after {
-
         content: "";
         display: block;
-        width: 5.5em;
+        width: 5em;
         height: 0.1em;
         background-color: var(--color);
     }
